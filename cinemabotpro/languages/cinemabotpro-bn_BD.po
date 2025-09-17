@@ -1,0 +1,248 @@
+# CinemaBot Pro - Bengali Translation
+# Copyright (C) 2024
+# This file is distributed under the same license as the CinemaBot Pro package.
+
+msgid ""
+msgstr ""
+"Project-Id-Version: CinemaBot Pro 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-01 00:00+0000\n"
+"PO-Revision-Date: 2024-01-01 00:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Bengali\n"
+"Language: bn_BD\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "CinemaBot Pro"
+msgstr "সিনেমাবট প্রো"
+
+msgid "Ultimate Movie & TV Chatbot"
+msgstr "আল্টিমেট মুভি এবং টিভি চ্যাটবট"
+
+msgid "Settings"
+msgstr "সেটিংস"
+
+msgid "Online"
+msgstr "অনলাইন"
+
+msgid "Offline"
+msgstr "অফলাইন"
+
+msgid "Minimize"
+msgstr "ছোট করুন"
+
+msgid "Type your message..."
+msgstr "আপনার বার্তা টাইপ করুন..."
+
+msgid "Send Message"
+msgstr "বার্তা পাঠান"
+
+msgid "Popular Movies"
+msgstr "জনপ্রিয় সিনেমা"
+
+msgid "Recommendations"
+msgstr "সুপারিশ"
+
+msgid "New Releases"
+msgstr "নতুন রিলিজ"
+
+msgid "Clear Chat"
+msgstr "চ্যাট পরিষ্কার করুন"
+
+msgid "Toggle Avatar Rotation"
+msgstr "অবতার রোটেশন টগল করুন"
+
+msgid "Feedback"
+msgstr "প্রতিক্রিয়া"
+
+msgid "Powered by CinemaBot Pro"
+msgstr "সিনেমাবট প্রো দ্বারা চালিত"
+
+msgid "Chat Settings"
+msgstr "চ্যাট সেটিংস"
+
+msgid "Language Detection"
+msgstr "ভাষা সনাক্তকরণ"
+
+msgid "Avatar Rotation"
+msgstr "অবতার রোটেশন"
+
+msgid "Sound Notifications"
+msgstr "সাউন্ড নোটিফিকেশন"
+
+msgid "Theme"
+msgstr "থিম"
+
+msgid "Dark"
+msgstr "ডার্ক"
+
+msgid "Light"
+msgstr "লাইট"
+
+msgid "Auto"
+msgstr "অটো"
+
+msgid "Discover Movies & TV Shows"
+msgstr "সিনেমা এবং টিভি শো আবিষ্কার করুন"
+
+msgid "Find your next favorite movie or TV show with our AI-powered recommendations"
+msgstr "আমাদের এআই-চালিত সুপারিশ দিয়ে আপনার পরবর্তী প্রিয় সিনেমা বা টিভি শো খুঁজুন"
+
+msgid "Search for movies, TV shows, actors, directors..."
+msgstr "সিনেমা, টিভি শো, অভিনেতা, পরিচালক খোঁজ করুন..."
+
+msgid "Voice Search"
+msgstr "ভয়েস সার্চ"
+
+msgid "Advanced Search"
+msgstr "উন্নত সার্চ"
+
+msgid "All"
+msgstr "সকল"
+
+msgid "Movies"
+msgstr "সিনেমা"
+
+msgid "TV Shows"
+msgstr "টিভি শো"
+
+msgid "Documentaries"
+msgstr "তথ্যচিত্র"
+
+msgid "Genre"
+msgstr "ধরন"
+
+msgid "All Genres"
+msgstr "সকল ধরন"
+
+msgid "Year"
+msgstr "বছর"
+
+msgid "All Years"
+msgstr "সকল বছর"
+
+msgid "Rating"
+msgstr "রেটিং"
+
+msgid "All Ratings"
+msgstr "সকল রেটিং"
+
+msgid "Stars"
+msgstr "তারকা"
+
+msgid "Language"
+msgstr "ভাষা"
+
+msgid "All Languages"
+msgstr "সকল ভাষা"
+
+msgid "English"
+msgstr "ইংরেজি"
+
+msgid "Bengali"
+msgstr "বাংলা"
+
+msgid "Hindi"
+msgstr "হিন্দি"
+
+msgid "Spanish"
+msgstr "স্প্যানিশ"
+
+msgid "French"
+msgstr "ফরাসি"
+
+msgid "German"
+msgstr "জার্মান"
+
+msgid "Japanese"
+msgstr "জাপানি"
+
+msgid "Korean"
+msgstr "কোরিয়ান"
+
+msgid "Sort By"
+msgstr "অনুযায়ী সাজান"
+
+msgid "Relevance"
+msgstr "প্রাসঙ্গিকতা"
+
+msgid "Popularity"
+msgstr "জনপ্রিয়তা"
+
+msgid "Release Year"
+msgstr "মুক্তির বছর"
+
+msgid "Title (A-Z)"
+msgstr "শিরোনাম (ক-জ)"
+
+msgid "Duration"
+msgstr "সময়কাল"
+
+msgid "Any Duration"
+msgstr "যেকোনো সময়কাল"
+
+msgid "Short (< 90 min)"
+msgstr "ছোট (< ৯০ মিনিট)"
+
+msgid "Medium (90-150 min)"
+msgstr "মাঝারি (৯০-১৫০ মিনিট)"
+
+msgid "Long (> 150 min)"
+msgstr "বড় (> ১৫০ মিনিট)"
+
+msgid "Clear Filters"
+msgstr "ফিল্টার পরিষ্কার করুন"
+
+msgid "Save Search"
+msgstr "সার্চ সেভ করুন"
+
+msgid "Grid View"
+msgstr "গ্রিড ভিউ"
+
+msgid "List View"
+msgstr "তালিকা ভিউ"
+
+msgid "Trending Searches"
+msgstr "ট্রেন্ডিং সার্চ"
+
+msgid "AI Recommendations for You"
+msgstr "আপনার জন্য এআই সুপারিশ"
+
+msgid "Load More"
+msgstr "আরো লোড করুন"
+
+msgid "No Results Found"
+msgstr "কোনো ফলাফল পাওয়া যায়নি"
+
+msgid "We couldn't find any content matching your search criteria."
+msgstr "আমরা আপনার সার্চ মানদণ্ডের সাথে মিলে এমন কোনো কন্টেন্ট খুঁজে পাইনি।"
+
+msgid "Clear All Filters"
+msgstr "সকল ফিল্টার পরিষ্কার করুন"
+
+msgid "Ask AI for Help"
+msgstr "এআইয়ের কাছে সাহায্য চান"
+
+msgid "Listening..."
+msgstr "শুনছি..."
+
+msgid "Say something like \"Show me action movies from 2023\""
+msgstr "এমন কিছু বলুন \"২০২৩ সালের অ্যাকশন মুভি দেখান\""
+
+msgid "Stop"
+msgstr "বন্ধ করুন"
+
+msgid "Voice search is not supported in your browser."
+msgstr "আপনার ব্রাউজারে ভয়েস সার্চ সাপোর্টেড নয়।"
+
+msgid "Typing..."
+msgstr "টাইপ করছি..."
+
+msgid "Something went wrong. Please try again."
+msgstr "কিছু ভুল হয়েছে। অনুগ্রহ করে আবার চেষ্টা করুন।"
+
+msgid "Are you sure you want to clear the chat history?"
+msgstr "আপনি কি নিশ্চিত যে চ্যাট ইতিহাস পরিষ্কার করতে চান?"

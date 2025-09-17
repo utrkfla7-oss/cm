@@ -1,0 +1,481 @@
+/**
+ * CinemaBot Pro Main Styles
+ * 
+ * Main stylesheet for the CinemaBot Pro plugin
+ */
+
+/* === Variables === */
+:root {
+    --cbp-primary: #2563eb;
+    --cbp-primary-dark: #1d4ed8;
+    --cbp-secondary: #64748b;
+    --cbp-accent: #f59e0b;
+    --cbp-success: #10b981;
+    --cbp-warning: #f59e0b;
+    --cbp-error: #ef4444;
+    --cbp-text: #1f2937;
+    --cbp-text-light: #6b7280;
+    --cbp-bg: #ffffff;
+    --cbp-bg-light: #f9fafb;
+    --cbp-border: #e5e7eb;
+    --cbp-border-light: #f3f4f6;
+    --cbp-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --cbp-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --cbp-radius: 8px;
+    --cbp-radius-sm: 4px;
+    --cbp-radius-lg: 12px;
+    --cbp-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    --cbp-transition: all 0.2s ease-in-out;
+}
+
+/* === Base Styles === */
+.cinemabotpro-container {
+    font-family: var(--cbp-font-family);
+    line-height: 1.6;
+    color: var(--cbp-text);
+}
+
+.cinemabotpro-container * {
+    box-sizing: border-box;
+}
+
+/* === Utility Classes === */
+.cbp-hidden {
+    display: none !important;
+}
+
+.cbp-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.cbp-loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.cbp-text-center {
+    text-align: center;
+}
+
+.cbp-text-right {
+    text-align: right;
+}
+
+.cbp-mb-0 { margin-bottom: 0; }
+.cbp-mb-1 { margin-bottom: 0.25rem; }
+.cbp-mb-2 { margin-bottom: 0.5rem; }
+.cbp-mb-3 { margin-bottom: 1rem; }
+.cbp-mb-4 { margin-bottom: 1.5rem; }
+
+.cbp-mt-0 { margin-top: 0; }
+.cbp-mt-1 { margin-top: 0.25rem; }
+.cbp-mt-2 { margin-top: 0.5rem; }
+.cbp-mt-3 { margin-top: 1rem; }
+.cbp-mt-4 { margin-top: 1.5rem; }
+
+/* === Components === */
+
+/* Buttons */
+.cbp-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    border: 1px solid transparent;
+    border-radius: var(--cbp-radius-sm);
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    cursor: pointer;
+    transition: var(--cbp-transition);
+    text-decoration: none;
+    background: none;
+    outline: none;
+}
+
+.cbp-btn:focus {
+    outline: 2px solid var(--cbp-primary);
+    outline-offset: 2px;
+}
+
+.cbp-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.cbp-btn-primary {
+    background-color: var(--cbp-primary);
+    color: white;
+    border-color: var(--cbp-primary);
+}
+
+.cbp-btn-primary:hover:not(:disabled) {
+    background-color: var(--cbp-primary-dark);
+    border-color: var(--cbp-primary-dark);
+}
+
+.cbp-btn-secondary {
+    background-color: var(--cbp-bg);
+    color: var(--cbp-text);
+    border-color: var(--cbp-border);
+}
+
+.cbp-btn-secondary:hover:not(:disabled) {
+    background-color: var(--cbp-bg-light);
+}
+
+.cbp-btn-sm {
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+}
+
+.cbp-btn-lg {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+}
+
+/* Cards */
+.cbp-card {
+    background: var(--cbp-bg);
+    border: 1px solid var(--cbp-border);
+    border-radius: var(--cbp-radius);
+    box-shadow: var(--cbp-shadow);
+    overflow: hidden;
+}
+
+.cbp-card-header {
+    padding: 1rem;
+    border-bottom: 1px solid var(--cbp-border);
+    background: var(--cbp-bg-light);
+}
+
+.cbp-card-body {
+    padding: 1rem;
+}
+
+.cbp-card-footer {
+    padding: 1rem;
+    border-top: 1px solid var(--cbp-border);
+    background: var(--cbp-bg-light);
+}
+
+/* Forms */
+.cbp-form-group {
+    margin-bottom: 1rem;
+}
+
+.cbp-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--cbp-text);
+}
+
+.cbp-input {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--cbp-border);
+    border-radius: var(--cbp-radius-sm);
+    background: var(--cbp-bg);
+    color: var(--cbp-text);
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    transition: var(--cbp-transition);
+}
+
+.cbp-input:focus {
+    outline: none;
+    border-color: var(--cbp-primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.cbp-textarea {
+    resize: vertical;
+    min-height: 4rem;
+}
+
+.cbp-select {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.5rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    padding-right: 2.5rem;
+}
+
+/* Alerts */
+.cbp-alert {
+    padding: 1rem;
+    border: 1px solid transparent;
+    border-radius: var(--cbp-radius);
+    margin-bottom: 1rem;
+}
+
+.cbp-alert-success {
+    background-color: #d1fae5;
+    border-color: #10b981;
+    color: #047857;
+}
+
+.cbp-alert-warning {
+    background-color: #fef3c7;
+    border-color: #f59e0b;
+    color: #92400e;
+}
+
+.cbp-alert-error {
+    background-color: #fee2e2;
+    border-color: #ef4444;
+    color: #dc2626;
+}
+
+.cbp-alert-info {
+    background-color: #dbeafe;
+    border-color: var(--cbp-primary);
+    color: #1d4ed8;
+}
+
+/* Loading Spinner */
+.cbp-spinner {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid var(--cbp-border);
+    border-radius: 50%;
+    border-top-color: var(--cbp-primary);
+    animation: cbp-spin 1s ease-in-out infinite;
+}
+
+@keyframes cbp-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Badges */
+.cbp-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--cbp-radius-sm);
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.cbp-badge-primary {
+    background-color: var(--cbp-primary);
+    color: white;
+}
+
+.cbp-badge-secondary {
+    background-color: var(--cbp-secondary);
+    color: white;
+}
+
+.cbp-badge-success {
+    background-color: var(--cbp-success);
+    color: white;
+}
+
+.cbp-badge-warning {
+    background-color: var(--cbp-warning);
+    color: white;
+}
+
+.cbp-badge-error {
+    background-color: var(--cbp-error);
+    color: white;
+}
+
+/* Tooltips */
+.cbp-tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.cbp-tooltip::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.5rem;
+    background: var(--cbp-text);
+    color: white;
+    border-radius: var(--cbp-radius-sm);
+    font-size: 0.75rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--cbp-transition);
+    z-index: 1000;
+}
+
+.cbp-tooltip:hover::before {
+    opacity: 1;
+}
+
+/* Modal */
+.cbp-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--cbp-transition);
+}
+
+.cbp-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.cbp-modal-content {
+    background: var(--cbp-bg);
+    border-radius: var(--cbp-radius);
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: var(--cbp-shadow-lg);
+    transform: scale(0.95);
+    transition: var(--cbp-transition);
+}
+
+.cbp-modal.active .cbp-modal-content {
+    transform: scale(1);
+}
+
+.cbp-modal-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--cbp-border);
+}
+
+.cbp-modal-body {
+    padding: 1.5rem;
+}
+
+.cbp-modal-footer {
+    padding: 1.5rem;
+    border-top: 1px solid var(--cbp-border);
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+
+/* Grid */
+.cbp-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.cbp-grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+.cbp-grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.cbp-grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.cbp-grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cbp-grid-cols-2,
+    .cbp-grid-cols-3,
+    .cbp-grid-cols-4 {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    
+    .cbp-modal-content {
+        margin: 1rem;
+        max-width: calc(100% - 2rem);
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --cbp-text: #f9fafb;
+        --cbp-text-light: #d1d5db;
+        --cbp-bg: #1f2937;
+        --cbp-bg-light: #374151;
+        --cbp-border: #4b5563;
+        --cbp-border-light: #374151;
+    }
+}
+
+/* Animations */
+.cbp-fade-in {
+    animation: cbp-fadeIn 0.3s ease-in-out;
+}
+
+.cbp-slide-up {
+    animation: cbp-slideUp 0.3s ease-in-out;
+}
+
+.cbp-bounce-in {
+    animation: cbp-bounceIn 0.5s ease-in-out;
+}
+
+@keyframes cbp-fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes cbp-slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes cbp-bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Print styles */
+@media print {
+    .cbp-btn,
+    .cbp-modal {
+        display: none !important;
+    }
+    
+    .cbp-card {
+        border: 1px solid #000;
+        box-shadow: none;
+    }
+}

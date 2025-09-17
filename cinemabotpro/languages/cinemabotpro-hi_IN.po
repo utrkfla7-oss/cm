@@ -1,0 +1,248 @@
+# CinemaBot Pro - Hindi Translation
+# Copyright (C) 2024
+# This file is distributed under the same license as the CinemaBot Pro package.
+
+msgid ""
+msgstr ""
+"Project-Id-Version: CinemaBot Pro 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-01 00:00+0000\n"
+"PO-Revision-Date: 2024-01-01 00:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Hindi\n"
+"Language: hi_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "CinemaBot Pro"
+msgstr "सिनेमाबॉट प्रो"
+
+msgid "Ultimate Movie & TV Chatbot"
+msgstr "अल्टीमेट मूवी और टीवी चैटबॉट"
+
+msgid "Settings"
+msgstr "सेटिंग्स"
+
+msgid "Online"
+msgstr "ऑनलाइन"
+
+msgid "Offline"
+msgstr "ऑफलाइन"
+
+msgid "Minimize"
+msgstr "छोटा करें"
+
+msgid "Type your message..."
+msgstr "अपना संदेश टाइप करें..."
+
+msgid "Send Message"
+msgstr "संदेश भेजें"
+
+msgid "Popular Movies"
+msgstr "लोकप्रिय फिल्में"
+
+msgid "Recommendations"
+msgstr "सिफारिशें"
+
+msgid "New Releases"
+msgstr "नई रिलीज़"
+
+msgid "Clear Chat"
+msgstr "चैट साफ़ करें"
+
+msgid "Toggle Avatar Rotation"
+msgstr "अवतार रोटेशन टॉगल करें"
+
+msgid "Feedback"
+msgstr "फीडबैक"
+
+msgid "Powered by CinemaBot Pro"
+msgstr "सिनेमाबॉट प्रो द्वारा संचालित"
+
+msgid "Chat Settings"
+msgstr "चैट सेटिंग्स"
+
+msgid "Language Detection"
+msgstr "भाषा पहचान"
+
+msgid "Avatar Rotation"
+msgstr "अवतार रोटेशन"
+
+msgid "Sound Notifications"
+msgstr "ध्वनि सूचनाएं"
+
+msgid "Theme"
+msgstr "थीम"
+
+msgid "Dark"
+msgstr "डार्क"
+
+msgid "Light"
+msgstr "लाइट"
+
+msgid "Auto"
+msgstr "ऑटो"
+
+msgid "Discover Movies & TV Shows"
+msgstr "फिल्में और टीवी शो खोजें"
+
+msgid "Find your next favorite movie or TV show with our AI-powered recommendations"
+msgstr "हमारी एआई-संचालित सिफारिशों के साथ अपनी अगली पसंदीदा फिल्म या टीवी शो खोजें"
+
+msgid "Search for movies, TV shows, actors, directors..."
+msgstr "फिल्में, टीवी शो, अभिनेता, निर्देशक खोजें..."
+
+msgid "Voice Search"
+msgstr "वॉयस सर्च"
+
+msgid "Advanced Search"
+msgstr "उन्नत खोज"
+
+msgid "All"
+msgstr "सभी"
+
+msgid "Movies"
+msgstr "फिल्में"
+
+msgid "TV Shows"
+msgstr "टीवी शो"
+
+msgid "Documentaries"
+msgstr "वृत्तचित्र"
+
+msgid "Genre"
+msgstr "शैली"
+
+msgid "All Genres"
+msgstr "सभी शैलियां"
+
+msgid "Year"
+msgstr "वर्ष"
+
+msgid "All Years"
+msgstr "सभी वर्ष"
+
+msgid "Rating"
+msgstr "रेटिंग"
+
+msgid "All Ratings"
+msgstr "सभी रेटिंग"
+
+msgid "Stars"
+msgstr "स्टार"
+
+msgid "Language"
+msgstr "भाषा"
+
+msgid "All Languages"
+msgstr "सभी भाषाएं"
+
+msgid "English"
+msgstr "अंग्रेजी"
+
+msgid "Bengali"
+msgstr "बंगाली"
+
+msgid "Hindi"
+msgstr "हिंदी"
+
+msgid "Spanish"
+msgstr "स्पेनिश"
+
+msgid "French"
+msgstr "फ्रेंच"
+
+msgid "German"
+msgstr "जर्मन"
+
+msgid "Japanese"
+msgstr "जापानी"
+
+msgid "Korean"
+msgstr "कोरियाई"
+
+msgid "Sort By"
+msgstr "के अनुसार क्रमबद्ध करें"
+
+msgid "Relevance"
+msgstr "प्रासंगिकता"
+
+msgid "Popularity"
+msgstr "लोकप्रियता"
+
+msgid "Release Year"
+msgstr "रिलीज़ वर्ष"
+
+msgid "Title (A-Z)"
+msgstr "शीर्षक (A-Z)"
+
+msgid "Duration"
+msgstr "अवधि"
+
+msgid "Any Duration"
+msgstr "कोई भी अवधि"
+
+msgid "Short (< 90 min)"
+msgstr "छोटी (< 90 मिनट)"
+
+msgid "Medium (90-150 min)"
+msgstr "मध्यम (90-150 मिनट)"
+
+msgid "Long (> 150 min)"
+msgstr "लंबी (> 150 मिनट)"
+
+msgid "Clear Filters"
+msgstr "फिल्टर साफ़ करें"
+
+msgid "Save Search"
+msgstr "खोज सहेजें"
+
+msgid "Grid View"
+msgstr "ग्रिड व्यू"
+
+msgid "List View"
+msgstr "सूची दृश्य"
+
+msgid "Trending Searches"
+msgstr "ट्रेंडिंग खोजें"
+
+msgid "AI Recommendations for You"
+msgstr "आपके लिए एआई सिफारिशें"
+
+msgid "Load More"
+msgstr "और लोड करें"
+
+msgid "No Results Found"
+msgstr "कोई परिणाम नहीं मिला"
+
+msgid "We couldn't find any content matching your search criteria."
+msgstr "हमें आपकी खोज मानदंडों से मेल खाने वाली कोई सामग्री नहीं मिली।"
+
+msgid "Clear All Filters"
+msgstr "सभी फिल्टर साफ़ करें"
+
+msgid "Ask AI for Help"
+msgstr "एआई से मदद मांगें"
+
+msgid "Listening..."
+msgstr "सुन रहा है..."
+
+msgid "Say something like \"Show me action movies from 2023\""
+msgstr "कुछ इस तरह कहें \"मुझे 2023 की एक्शन फिल्में दिखाएं\""
+
+msgid "Stop"
+msgstr "रोकें"
+
+msgid "Voice search is not supported in your browser."
+msgstr "आपके ब्राउज़र में वॉयस सर्च समर्थित नहीं है।"
+
+msgid "Typing..."
+msgstr "टाइप कर रहा है..."
+
+msgid "Something went wrong. Please try again."
+msgstr "कुछ गलत हुआ। कृपया पुनः प्रयास करें।"
+
+msgid "Are you sure you want to clear the chat history?"
+msgstr "क्या आप वाकई चैट इतिहास साफ़ करना चाहते हैं?"

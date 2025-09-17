@@ -662,7 +662,7 @@ class CinemaBotPro_API {
             $content_data['seasons'] = intval($meta['number_of_seasons'][0] ?? 0);
             $content_data['episodes'] = intval($meta['number_of_episodes'][0] ?? 0);
             $content_data['status'] = $meta['status'][0] ?? '';
-            $content_data['networks'] => $meta['networks'][0] ?? '';
+            $content_data['networks'] = $meta['networks'][0] ?? '';
         }
         
         return $content_data;

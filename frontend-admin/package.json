@@ -1,0 +1,55 @@
+{
+  "name": "netflix-frontend-admin",
+  "version": "1.0.0",
+  "description": "React-based admin panel for Netflix streaming platform",
+  "private": true,
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.11.2",
+    "react-scripts": "5.0.1",
+    "axios": "^1.4.0",
+    "antd": "^5.6.1",
+    "@ant-design/icons": "^5.1.4",
+    "styled-components": "^6.0.2",
+    "react-player": "^2.12.0",
+    "react-query": "^3.39.3",
+    "recharts": "^2.7.2",
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1",
+    "moment": "^2.29.4",
+    "lodash": "^4.17.21"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint src/",
+    "format": "prettier --write src/"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.12",
+    "@types/react-dom": "^18.2.5",
+    "eslint": "^8.42.0",
+    "prettier": "^2.8.8"
+  }
+}

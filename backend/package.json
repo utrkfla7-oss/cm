@@ -1,0 +1,41 @@
+{
+  "name": "netflix-backend",
+  "version": "1.0.0",
+  "description": "Node.js backend for Netflix streaming platform optimized for cPanel hosting",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "build": "echo 'Backend build completed'",
+    "test": "jest",
+    "lint": "eslint src/",
+    "format": "prettier --write src/"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.0.0",
+    "express-rate-limit": "^6.7.0",
+    "jsonwebtoken": "^9.0.0",
+    "bcryptjs": "^2.4.3",
+    "mysql2": "^3.3.3",
+    "multer": "^1.4.5-lts.1",
+    "axios": "^1.4.0",
+    "node-ffmpeg": "^0.6.23",
+    "hls-server": "^0.6.1",
+    "dotenv": "^16.1.4",
+    "joi": "^17.9.2",
+    "winston": "^3.9.0",
+    "express-validator": "^7.0.1",
+    "node-cron": "^3.0.2",
+    "openai": "^3.3.0",
+    "aws-sdk": "^2.1397.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22",
+    "jest": "^29.5.0",
+    "supertest": "^6.3.3",
+    "eslint": "^8.42.0",
+    "prettier": "^2.8.8"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "netflix-streaming-platform",
+  "version": "1.0.0",
+  "description": "Full-featured Netflix-style video streaming platform with WordPress integration",
+  "main": "index.js",
+  "scripts": {
+    "setup": "bash scripts/setup.sh",
+    "install-backend": "cd backend && npm install",
+    "install-frontend": "cd frontend-admin && npm install",
+    "build-backend": "cd backend && npm run build",
+    "build-frontend": "cd frontend-admin && npm run build",
+    "start-backend": "cd backend && npm start",
+    "start-frontend": "cd frontend-admin && npm start",
+    "deploy": "bash scripts/deploy.sh",
+    "test": "npm run test-backend && npm run test-frontend",
+    "test-backend": "cd backend && npm test",
+    "test-frontend": "cd frontend-admin && npm test"
+  },
+  "keywords": [
+    "streaming",
+    "video",
+    "netflix",
+    "wordpress",
+    "cpanel",
+    "imdb",
+    "hls",
+    "dash"
+  ],
+  "author": "Netflix Platform Team",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "prettier": "^3.0.0"
+  }
+}

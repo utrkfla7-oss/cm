@@ -1,0 +1,71 @@
+name: netflix_mobile
+description: Netflix Streaming Platform Mobile App
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: ">=3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # UI
+  cupertino_icons: ^1.0.2
+  
+  # State Management
+  provider: ^6.0.5
+  
+  # HTTP & API
+  http: ^1.1.0
+  dio: ^5.2.1
+  
+  # Storage
+  shared_preferences: ^2.2.0
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  
+  # Video Player
+  video_player: ^2.7.0
+  chewie: ^1.7.0
+  
+  # Navigation
+  go_router: ^10.0.0
+  
+  # Utils
+  cached_network_image: ^3.2.3
+  shimmer: ^3.0.0
+  
+  # Authentication
+  local_auth: ^2.1.6
+  
+  # Notifications
+  firebase_messaging: ^14.6.5
+  flutter_local_notifications: ^15.1.0
+  
+  # Permissions
+  permission_handler: ^10.4.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  hive_generator: ^2.0.0
+  build_runner: ^2.4.6
+
+flutter:
+  uses-material-design: true
+  
+  assets:
+    - assets/images/
+    - assets/icons/
+    
+  fonts:
+    - family: Netflix Sans
+      fonts:
+        - asset: assets/fonts/NetflixSans-Regular.ttf
+        - asset: assets/fonts/NetflixSans-Bold.ttf
+          weight: 700

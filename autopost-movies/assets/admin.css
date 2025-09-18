@@ -1,0 +1,215 @@
+/* AutoPost Movies Admin Styles */
+
+.apm-admin-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.apm-main-content {
+    flex: 2;
+}
+
+.apm-sidebar {
+    flex: 1;
+    min-width: 300px;
+}
+
+.apm-sidebar-section {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+
+.apm-sidebar-section h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.apm-section {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+
+.apm-section h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.apm-logs-table {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    margin-top: 10px;
+}
+
+.apm-logs-table table {
+    margin: 0;
+}
+
+.apm-logs-table th {
+    position: sticky;
+    top: 0;
+    background: #f9f9f9;
+    z-index: 1;
+}
+
+.apm-log-error {
+    background-color: #ffeaea;
+}
+
+.apm-log-warning {
+    background-color: #fff3cd;
+}
+
+.apm-log-info {
+    background-color: #e7f3ff;
+}
+
+.apm-log-debug {
+    background-color: #f8f9fa;
+}
+
+#apm-sync-status {
+    margin-top: 15px;
+}
+
+.apm-api-status-success {
+    color: #46b450;
+}
+
+.apm-api-status-error {
+    color: #dc3232;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .apm-admin-container {
+        flex-direction: column;
+    }
+    
+    .apm-sidebar {
+        min-width: auto;
+    }
+}
+
+/* Form styling improvements */
+.form-table th {
+    width: 200px;
+    font-weight: 600;
+}
+
+.form-table input[type="text"],
+.form-table input[type="number"],
+.form-table select {
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-table .description {
+    font-style: italic;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Button spacing */
+.apm-sidebar-section .button {
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+/* Statistics styling */
+.apm-sidebar-section p {
+    margin: 8px 0;
+}
+
+.apm-sidebar-section strong {
+    font-weight: 600;
+}
+
+/* Enhanced notice styles */
+.notice {
+    margin: 15px 0;
+    padding: 12px;
+}
+
+.notice p {
+    margin: 0;
+}
+
+/* Loading states */
+.button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Required field indicator */
+.form-table th label:after {
+    content: "";
+}
+
+.form-table th label[for="apm_tmdb_api_key"]:after {
+    content: " *";
+    color: #dc3232;
+}
+
+/* Section transitions */
+.apm-section,
+.apm-sidebar-section {
+    transition: box-shadow 0.2s ease;
+}
+
+.apm-section:hover,
+.apm-sidebar-section:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,.1);
+}
+
+/* Checkbox and radio styling */
+.form-table input[type="checkbox"],
+.form-table input[type="radio"] {
+    margin-right: 8px;
+}
+
+.form-table fieldset label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Log level badges */
+.apm-logs-table .apm-log-error td:nth-child(2) {
+    font-weight: bold;
+    color: #dc3232;
+}
+
+.apm-logs-table .apm-log-warning td:nth-child(2) {
+    font-weight: bold;
+    color: #dba617;
+}
+
+.apm-logs-table .apm-log-info td:nth-child(2) {
+    font-weight: bold;
+    color: #0073aa;
+}
+
+/* Mobile responsiveness for tables */
+@media (max-width: 768px) {
+    .apm-logs-table {
+        font-size: 12px;
+    }
+    
+    .apm-logs-table th,
+    .apm-logs-table td {
+        padding: 6px 4px;
+    }
+}

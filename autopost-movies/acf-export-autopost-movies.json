@@ -1,0 +1,334 @@
+[
+    {
+        "key": "group_apm_movie_fields",
+        "title": "AutoPost Movies Fields",
+        "fields": [
+            {
+                "key": "field_apm_tmdb_id",
+                "label": "TMDB ID",
+                "name": "apm_tmdb_id",
+                "type": "text",
+                "instructions": "The Movie Database ID",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "33",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_apm_imdb_id",
+                "label": "IMDb ID",
+                "name": "apm_imdb_id",
+                "type": "text",
+                "instructions": "Internet Movie Database ID",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "33",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "tt1234567",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_apm_media_type",
+                "label": "Media Type",
+                "name": "apm_media_type",
+                "type": "select",
+                "instructions": "Type of media (Movie or TV Series)",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "33",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "movie": "Movie",
+                    "tv": "TV Series"
+                },
+                "default_value": "movie",
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            {
+                "key": "field_apm_year",
+                "label": "Year",
+                "name": "apm_year",
+                "type": "number",
+                "instructions": "Release year",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "25",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "2024",
+                "prepend": "",
+                "append": "",
+                "min": 1900,
+                "max": 2030,
+                "step": ""
+            },
+            {
+                "key": "field_apm_tmdb_rating",
+                "label": "TMDB Rating",
+                "name": "apm_tmdb_rating",
+                "type": "number",
+                "instructions": "Rating from TMDB (0-10)",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "25",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "7.5",
+                "prepend": "",
+                "append": "/10",
+                "min": 0,
+                "max": 10,
+                "step": 0.1
+            },
+            {
+                "key": "field_apm_runtime",
+                "label": "Runtime",
+                "name": "apm_runtime",
+                "type": "number",
+                "instructions": "Runtime in minutes (for movies)",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_apm_media_type",
+                            "operator": "==",
+                            "value": "movie"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "25",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "120",
+                "prepend": "",
+                "append": "min",
+                "min": 1,
+                "max": 500,
+                "step": ""
+            },
+            {
+                "key": "field_apm_seasons",
+                "label": "Seasons",
+                "name": "apm_seasons",
+                "type": "number",
+                "instructions": "Number of seasons (for TV series)",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_apm_media_type",
+                            "operator": "==",
+                            "value": "tv"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "25",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "3",
+                "prepend": "",
+                "append": "",
+                "min": 1,
+                "max": 50,
+                "step": ""
+            },
+            {
+                "key": "field_apm_episodes",
+                "label": "Episodes",
+                "name": "apm_episodes",
+                "type": "number",
+                "instructions": "Total number of episodes (for TV series)",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_apm_media_type",
+                            "operator": "==",
+                            "value": "tv"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "25",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "36",
+                "prepend": "",
+                "append": "",
+                "min": 1,
+                "max": 1000,
+                "step": ""
+            },
+            {
+                "key": "field_apm_genres",
+                "label": "Genres",
+                "name": "apm_genres",
+                "type": "text",
+                "instructions": "Comma-separated list of genres",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "Action, Drama, Thriller",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_apm_release_date",
+                "label": "Release Date",
+                "name": "apm_release_date",
+                "type": "date_picker",
+                "instructions": "Release date for movies",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_apm_media_type",
+                            "operator": "==",
+                            "value": "movie"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "display_format": "d/m/Y",
+                "return_format": "Y-m-d",
+                "first_day": 1
+            },
+            {
+                "key": "field_apm_first_air_date",
+                "label": "First Air Date",
+                "name": "apm_first_air_date",
+                "type": "date_picker",
+                "instructions": "First air date for TV series",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_apm_media_type",
+                            "operator": "==",
+                            "value": "tv"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "display_format": "d/m/Y",
+                "return_format": "Y-m-d",
+                "first_day": 1
+            },
+            {
+                "key": "field_apm_poster_url",
+                "label": "Poster URL",
+                "name": "apm_poster_url",
+                "type": "url",
+                "instructions": "URL to the poster image",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "https://image.tmdb.org/t/p/w500/..."
+            },
+            {
+                "key": "field_apm_backdrop_url",
+                "label": "Backdrop URL",
+                "name": "apm_backdrop_url",
+                "type": "url",
+                "instructions": "URL to the backdrop image",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "https://image.tmdb.org/t/p/w1280/..."
+            },
+            {
+                "key": "field_apm_trailer_url",
+                "label": "Trailer URL",
+                "name": "apm_trailer_url",
+                "type": "url",
+                "instructions": "YouTube trailer URL",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "100",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "https://www.youtube.com/watch?v=..."
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "post"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "Custom fields for AutoPost Movies plugin"
+    }
+]

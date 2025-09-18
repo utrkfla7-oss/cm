@@ -1,0 +1,30 @@
+# Test files (don't commit to production)
+test-tmdb-api.php
+
+# WordPress specific
+wp-config.php
+wp-content/uploads/
+wp-content/cache/
+wp-content/backup*/
+wp-content/debug.log
+
+# Plugin specific
+*.log
+debug.log
+
+# Development files
+.DS_Store
+Thumbs.db
+*.tmp
+*.temp
+
+# Archives
+*.zip
+*.tar.gz
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~

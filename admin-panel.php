@@ -25,6 +25,14 @@ function cmplayer_admin_panel() {
         update_option('cmplayer_feedback', isset($_POST['cmplayer_feedback']) ? 1 : 0);
         update_option('cmplayer_favorites', isset($_POST['cmplayer_favorites']) ? 1 : 0);
         update_option('cmplayer_errorpage', isset($_POST['cmplayer_errorpage']) ? 1 : 0);
+        
+        // AutoPost Movies settings
+        update_option('cmplayer_tmdb_api_key', sanitize_text_field($_POST['cmplayer_tmdb_api_key']));
+        update_option('cmplayer_autopost_enabled', isset($_POST['cmplayer_autopost_enabled']) ? 1 : 0);
+        update_option('cmplayer_autopost_max_posts', intval($_POST['cmplayer_autopost_max_posts']));
+        update_option('cmplayer_autopost_status', sanitize_text_field($_POST['cmplayer_autopost_status']));
+        update_option('cmplayer_autopost_category', intval($_POST['cmplayer_autopost_category']));
+        update_option('cmplayer_autopost_logging', isset($_POST['cmplayer_autopost_logging']) ? 1 : 0);
         echo '<div class="notice notice-success"><p>Settings saved!</p></div>';
     }
 
@@ -140,6 +148,38 @@ function cmplayer_admin_panel() {
                     <input type="checkbox" name="cmplayer_errorpage" value="1" <?php checked(get_option('cmplayer_errorpage'),1);?>> Enable custom error page
                 </td></tr>
             </table>
+            
+            <h2>AutoPost Movies (TMDB API)</h2>
+            <table class="form-table">
+                <tr><th>TMDB API Key</th><td>
+                    <input type="text" name="cmplayer_tmdb_api_key" value="<?php echo esc_attr(get_option('cmplayer_tmdb_api_key'));?>" style="width:100%;" placeholder="Enter your TMDB API key">
+                    <button type="button" id="test-tmdb-api" class="button">Test API Key</button>
+                    <p class="description">Get your free API key from <a href="https://www.themoviedb.org/settings/api" target="_blank">TMDB</a></p>
+                </td></tr>
+                <tr><th>Enable AutoPost</th><td>
+                    <input type="checkbox" name="cmplayer_autopost_enabled" value="1" <?php checked(get_option('cmplayer_autopost_enabled'),1);?>> Enable automatic movie posting
+                </td></tr>
+                <tr><th>Max Posts per Run</th><td>
+                    <input type="number" name="cmplayer_autopost_max_posts" value="<?php echo esc_attr(get_option('cmplayer_autopost_max_posts',5));?>" min="1" max="20"> movies per hour
+                </td></tr>
+                <tr><th>Post Status</th><td>
+                    <select name="cmplayer_autopost_status">
+                        <option value="draft" <?php selected(get_option('cmplayer_autopost_status'),'draft');?>>Draft</option>
+                        <option value="publish" <?php selected(get_option('cmplayer_autopost_status'),'publish');?>>Published</option>
+                        <option value="pending" <?php selected(get_option('cmplayer_autopost_status'),'pending');?>>Pending Review</option>
+                    </select>
+                </td></tr>
+                <tr><th>Default Category</th><td>
+                    <?php wp_dropdown_categories(array(
+                        'name' => 'cmplayer_autopost_category',
+                        'selected' => get_option('cmplayer_autopost_category', 1),
+                        'show_option_none' => 'Select Category'
+                    )); ?>
+                </td></tr>
+                <tr><th>Enable Logging</th><td>
+                    <input type="checkbox" name="cmplayer_autopost_logging" value="1" <?php checked(get_option('cmplayer_autopost_logging',1),1);?>> Enable detailed logging
+                </td></tr>
+            </table>
             <p>
                 <button type="submit" name="cmplayer_save_settings" class="button button-primary">Save Settings</button>
             </p>
@@ -158,6 +198,14 @@ function cmplayer_admin_panel() {
         </form>
 
         <hr>
+        <h3>AutoPost Movies Management</h3>
+        <p>
+            <button type="button" id="run-autopost-now" class="button">Run AutoPost Now</button>
+            <button type="button" id="clear-tmdb-cache" class="button">Clear TMDB Cache</button>
+        </p>
+        <div id="autopost-status"></div>
+
+        <hr>
         <h3>Subtitle Upload & EN→BN Translate</h3>
         <form method="post" enctype="multipart/form-data">
             <input type="file" name="cmplayer_sub_file" accept=".srt,.vtt">
@@ -165,6 +213,102 @@ function cmplayer_admin_panel() {
             <button type="submit" name="cmplayer_sub_upload" class="button">Upload & Convert</button>
         </form>
     </div>
+    
+    <script>
+    jQuery(document).ready(function($) {
+        // Test TMDB API Key
+        $('#test-tmdb-api').on('click', function() {
+            var apiKey = $('input[name="cmplayer_tmdb_api_key"]').val();
+            if (!apiKey) {
+                alert('Please enter a TMDB API key first.');
+                return;
+            }
+            
+            var button = $(this);
+            button.prop('disabled', true).text('Testing...');
+            
+            $.ajax({
+                url: ajaxurl,
+                type: 'POST',
+                data: {
+                    action: 'cmplayer_test_tmdb_api',
+                    api_key: apiKey,
+                    nonce: '<?php echo wp_create_nonce('cmplayer_admin_nonce'); ?>'
+                },
+                success: function(response) {
+                    if (response.success) {
+                        alert('Success: ' + response.data);
+                    } else {
+                        alert('Error: ' + response.data);
+                    }
+                },
+                error: function() {
+                    alert('Error: Failed to test API key.');
+                },
+                complete: function() {
+                    button.prop('disabled', false).text('Test API Key');
+                }
+            });
+        });
+        
+        // Run AutoPost Now
+        $('#run-autopost-now').on('click', function() {
+            var button = $(this);
+            button.prop('disabled', true).text('Running...');
+            $('#autopost-status').html('<p>Starting AutoPost process...</p>');
+            
+            $.ajax({
+                url: ajaxurl,
+                type: 'POST',
+                data: {
+                    action: 'cmplayer_run_autopost_now',
+                    nonce: '<?php echo wp_create_nonce('cmplayer_admin_nonce'); ?>'
+                },
+                success: function(response) {
+                    if (response.success) {
+                        $('#autopost-status').html('<p style="color: green;">Success: ' + response.data + '</p>');
+                    } else {
+                        $('#autopost-status').html('<p style="color: red;">Error: ' + response.data + '</p>');
+                    }
+                },
+                error: function() {
+                    $('#autopost-status').html('<p style="color: red;">Error: Failed to run AutoPost.</p>');
+                },
+                complete: function() {
+                    button.prop('disabled', false).text('Run AutoPost Now');
+                }
+            });
+        });
+        
+        // Clear TMDB Cache
+        $('#clear-tmdb-cache').on('click', function() {
+            var button = $(this);
+            button.prop('disabled', true).text('Clearing...');
+            
+            $.ajax({
+                url: ajaxurl,
+                type: 'POST',
+                data: {
+                    action: 'cmplayer_clear_tmdb_cache',
+                    nonce: '<?php echo wp_create_nonce('cmplayer_admin_nonce'); ?>'
+                },
+                success: function(response) {
+                    if (response.success) {
+                        alert('Success: ' + response.data);
+                    } else {
+                        alert('Error: ' + response.data);
+                    }
+                },
+                error: function() {
+                    alert('Error: Failed to clear cache.');
+                },
+                complete: function() {
+                    button.prop('disabled', false).text('Clear TMDB Cache');
+                }
+            });
+        });
+    });
+    </script>
     <?php
 }
 
@@ -186,7 +330,13 @@ function cmplayer_admin_fields() {
         'cmplayer_accessibility' => 'Accessibility',
         'cmplayer_feedback' => 'User Feedback',
         'cmplayer_favorites' => 'User Favorites',
-        'cmplayer_errorpage' => 'Custom Error Page'
+        'cmplayer_errorpage' => 'Custom Error Page',
+        'cmplayer_tmdb_api_key' => 'TMDB API Key',
+        'cmplayer_autopost_enabled' => 'AutoPost Enabled',
+        'cmplayer_autopost_max_posts' => 'Max Posts per Run',
+        'cmplayer_autopost_status' => 'Post Status',
+        'cmplayer_autopost_category' => 'Default Category',
+        'cmplayer_autopost_logging' => 'Enable Logging'
     ];
 }
 

@@ -22,11 +22,14 @@ add_action('wp_enqueue_scripts', function() {
 
 // Admin panel include
 if (is_admin()) {
-    include_once dirname(__FILE__).'/admin/admin-panel.php';
+    include_once dirname(__FILE__).'/admin-panel.php';
 }
 
 // REST API endpoints
-include_once dirname(__FILE__).'/inc/api.php';
+include_once dirname(__FILE__).'/api.php';
+
+// AutoPost Movies with TMDB API
+include_once dirname(__FILE__).'/autopost-movies.php';
 
 // Shortcode registration
 add_shortcode('cmplayer', function($atts) {

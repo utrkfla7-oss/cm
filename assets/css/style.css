@@ -1,0 +1,217 @@
+/* AutoPost Movies Frontend Styles */
+
+.autopost-movies-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff !important;
+    text-decoration: none !important;
+    border-radius: 6px;
+    margin: 8px 5px;
+    font-weight: 600;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.autopost-movies-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+    color: #fff !important;
+    text-decoration: none !important;
+}
+
+.autopost-movies-trailer-button {
+    background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%);
+    box-shadow: 0 4px 15px rgba(255, 65, 108, 0.3);
+}
+
+.autopost-movies-trailer-button:hover {
+    box-shadow: 0 6px 20px rgba(255, 65, 108, 0.4);
+}
+
+.autopost-movies-info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 16px;
+    min-width: 400px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.autopost-movies-info-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+.autopost-movies-info-table th,
+.autopost-movies-info-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.autopost-movies-info-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.autopost-movies-info-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.autopost-movies-info-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.autopost-movies-info-table th {
+    background: #f8f9fa;
+    font-weight: bold;
+    color: #495057;
+    width: 150px;
+}
+
+.autopost-movies-rating {
+    display: inline-block;
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    color: #333;
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0 3px 10px rgba(252, 182, 159, 0.3);
+    margin: 5px 0;
+}
+
+.autopost-movies-poster {
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    margin: 15px 0;
+    transition: transform 0.3s ease;
+}
+
+.autopost-movies-poster:hover {
+    transform: scale(1.02);
+}
+
+.autopost-movies-poster.size-small {
+    max-width: 200px;
+}
+
+.autopost-movies-poster.size-medium {
+    max-width: 300px;
+}
+
+.autopost-movies-poster.size-large {
+    max-width: 400px;
+}
+
+.autopost-movies-poster.alignleft {
+    float: left;
+    margin-right: 20px;
+}
+
+.autopost-movies-poster.alignright {
+    float: right;
+    margin-left: 20px;
+}
+
+.autopost-movies-poster.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.autopost-movies-links {
+    margin: 25px 0;
+    text-align: center;
+}
+
+.autopost-movies-links a {
+    margin: 5px 8px;
+}
+
+.autopost-movies-wikipedia-info {
+    background: #f8f9fa;
+    border-left: 4px solid #007cba;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.autopost-movies-wikipedia-info a {
+    color: #007cba;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.autopost-movies-wikipedia-info a:hover {
+    text-decoration: underline;
+}
+
+.autopost-movies-custom-info {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.autopost-movies-trailer-embed {
+    text-align: center;
+    margin: 25px 0;
+}
+
+.autopost-movies-trailer-embed iframe {
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .autopost-movies-button {
+        padding: 10px 18px;
+        font-size: 13px;
+        margin: 5px 3px;
+    }
+    
+    .autopost-movies-info-table {
+        font-size: 14px;
+    }
+    
+    .autopost-movies-info-table th,
+    .autopost-movies-info-table td {
+        padding: 10px 12px;
+    }
+    
+    .autopost-movies-poster.alignleft,
+    .autopost-movies-poster.alignright {
+        float: none;
+        display: block;
+        margin: 15px auto;
+    }
+    
+    .autopost-movies-trailer-embed iframe {
+        width: 100%;
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .autopost-movies-links {
+        text-align: left;
+    }
+    
+    .autopost-movies-button {
+        display: block;
+        text-align: center;
+        margin: 8px 0;
+    }
+}

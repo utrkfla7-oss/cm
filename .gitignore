@@ -1,5 +1,7 @@
 # Test files (don't commit to production)
 test-tmdb-api.php
+validation-test.php
+simple-validation.php
 
 # WordPress specific
 wp-config.php

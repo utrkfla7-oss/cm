@@ -39,6 +39,20 @@ add_action('rest_api_init', function() {
         'callback' => 'cmplayer_get_favorites',
         'permission_callback' => '__return_true'
     ));
+    
+    // TMDB Movie Search
+    register_rest_route('cmplayer/v1', '/movies/search', array(
+        'methods' => 'GET',
+        'callback' => 'cmplayer_search_movies',
+        'permission_callback' => '__return_true'
+    ));
+    
+    // Get Movie Details
+    register_rest_route('cmplayer/v1', '/movies/(?P<id>\d+)', array(
+        'methods' => 'GET',
+        'callback' => 'cmplayer_get_movie_details',
+        'permission_callback' => '__return_true'
+    ));
 });
 
 // Analytics event tracker
@@ -131,4 +145,40 @@ function cmplayer_get_favorites($request) {
     $favs = get_user_meta($user_id, 'cmplayer_favorites', true);
     if (!is_array($favs)) $favs = [];
     return array('favorites'=>$favs);
+}
+
+// Search movies via TMDB API
+function cmplayer_search_movies($request) {
+    $query = sanitize_text_field($request->get_param('q'));
+    
+    if (empty($query)) {
+        return new WP_Error('missing_query', 'Search query is required', array('status' => 400));
+    }
+    
+    $autopost = new CMPlayer_AutoPost_Movies();
+    $results = $autopost->search_movies($query);
+    
+    if (is_wp_error($results)) {
+        return $results;
+    }
+    
+    return array('results' => $results);
+}
+
+// Get movie details via TMDB API
+function cmplayer_get_movie_details($request) {
+    $autopost = new CMPlayer_AutoPost_Movies();
+    $movie_id = intval($request['id']);
+    
+    if (empty($movie_id)) {
+        return new WP_Error('invalid_id', 'Valid movie ID is required', array('status' => 400));
+    }
+    
+    $movie_details = $autopost->get_movie_details($movie_id);
+    
+    if (is_wp_error($movie_details)) {
+        return $movie_details;
+    }
+    
+    return $movie_details;
 }

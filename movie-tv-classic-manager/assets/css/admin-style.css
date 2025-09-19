@@ -1,0 +1,301 @@
+/* Movie TV Classic Manager - Admin Styles */
+
+/* Meta box styling */
+.mtcm-meta-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.mtcm-meta-table th {
+    width: 200px;
+    text-align: left;
+    font-weight: 600;
+    padding: 15px 10px 15px 0;
+    vertical-align: top;
+}
+
+.mtcm-meta-table td {
+    padding: 15px 0;
+    vertical-align: top;
+}
+
+.mtcm-meta-table .description {
+    margin-top: 5px;
+    font-style: italic;
+    color: #666;
+}
+
+/* TMDB Integration */
+.mtcm-tmdb-integration {
+    padding: 10px 0;
+}
+
+.mtcm-tmdb-status {
+    background: #f0f8f0;
+    border: 1px solid #c8e6c9;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 3px;
+}
+
+.mtcm-tmdb-status .dashicons {
+    margin-right: 5px;
+}
+
+#mtcm_tmdb_search_results {
+    background: #fff;
+    border-radius: 3px;
+}
+
+#mtcm_tmdb_search_results .mtcm-search-item {
+    border-bottom: 1px solid #eee;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#mtcm_tmdb_search_results .mtcm-search-item:hover {
+    background-color: #f8f9fa;
+}
+
+#mtcm_tmdb_search_results .mtcm-search-item:last-child {
+    border-bottom: none;
+}
+
+#mtcm_tmdb_search_results .mtcm-search-item strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #0073aa;
+}
+
+#mtcm_tmdb_search_results .mtcm-search-item small {
+    color: #666;
+    line-height: 1.4;
+}
+
+/* Poster Section */
+.mtcm-poster-section {
+    padding: 10px 0;
+}
+
+.mtcm-poster-preview {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.mtcm-poster-preview img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.mtcm-fifu-notice {
+    font-style: italic;
+    color: #666;
+    margin-top: 10px;
+}
+
+.mtcm-fifu-notice .dashicons {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+/* Buttons */
+.mtcm-button-group {
+    margin-top: 10px;
+}
+
+.mtcm-button-group .button {
+    margin-right: 5px;
+}
+
+/* Settings page */
+.mtcm-settings-header {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.04);
+}
+
+.mtcm-api-status,
+.mtcm-plugin-status {
+    margin-top: 8px;
+    font-style: italic;
+}
+
+.mtcm-api-status .dashicons,
+.mtcm-plugin-status .dashicons {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.mtcm-info-section {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-left: 4px solid #0073aa;
+    border-radius: 0 3px 3px 0;
+}
+
+.mtcm-info-section h3 {
+    margin-top: 0;
+    color: #0073aa;
+    font-size: 18px;
+}
+
+.mtcm-info-section h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 14px;
+}
+
+.mtcm-info-section ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.mtcm-info-section code {
+    background: #f1f1f1;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 13px;
+    color: #d63384;
+}
+
+/* Loading states */
+.mtcm-loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.mtcm-loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #0073aa;
+    border-radius: 50%;
+    animation: mtcm-spin 1s linear infinite;
+}
+
+@keyframes mtcm-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Error messages */
+.mtcm-error {
+    background: #ffeaa7;
+    border: 1px solid #fdcb6e;
+    color: #2d3436;
+    padding: 10px;
+    border-radius: 3px;
+    margin: 10px 0;
+}
+
+.mtcm-success {
+    background: #d1f2eb;
+    border: 1px solid #a3e4d7;
+    color: #0e6b5c;
+    padding: 10px;
+    border-radius: 3px;
+    margin: 10px 0;
+}
+
+/* TinyMCE button styling */
+.mce-i-mtcm-movie::before {
+    font-family: dashicons;
+    content: "\f126";
+    font-size: 18px;
+    color: #555;
+}
+
+/* Admin columns */
+.column-mtcm_poster {
+    width: 80px;
+}
+
+.column-mtcm_year {
+    width: 80px;
+}
+
+.column-mtcm_rating {
+    width: 80px;
+}
+
+.column-mtcm_tmdb {
+    width: 100px;
+}
+
+.mtcm-admin-poster {
+    max-width: 60px;
+    height: auto;
+    border-radius: 3px;
+}
+
+.mtcm-admin-rating {
+    background: #0073aa;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.mtcm-admin-tmdb-link {
+    color: #0073aa;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.mtcm-admin-tmdb-link:hover {
+    text-decoration: underline;
+}
+
+/* Dashboard widget */
+.mtcm-dashboard-widget {
+    padding: 10px 0;
+}
+
+.mtcm-dashboard-widget h4 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.mtcm-dashboard-widget ul {
+    margin: 10px 0;
+}
+
+.mtcm-dashboard-widget li {
+    margin-bottom: 5px;
+}
+
+/* Responsive design */
+@media screen and (max-width: 782px) {
+    .mtcm-meta-table th {
+        width: auto;
+        display: block;
+        padding-bottom: 5px;
+    }
+    
+    .mtcm-meta-table td {
+        display: block;
+        padding-top: 5px;
+        padding-bottom: 15px;
+    }
+    
+    .mtcm-info-section {
+        padding: 15px;
+        margin-top: 20px;
+    }
+}

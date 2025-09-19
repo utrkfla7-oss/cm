@@ -1,0 +1,646 @@
+[
+    {
+        "key": "group_mtcm_movie_fields",
+        "title": "Movie Details",
+        "fields": [
+            {
+                "key": "field_mtcm_tmdb_id",
+                "label": "TMDB ID",
+                "name": "mtcm_tmdb_id",
+                "type": "number",
+                "instructions": "The Movie Database ID for this movie",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "min": "",
+                "max": "",
+                "step": ""
+            },
+            {
+                "key": "field_mtcm_imdb_id",
+                "label": "IMDb ID",
+                "name": "mtcm_imdb_id",
+                "type": "text",
+                "instructions": "IMDb identifier (e.g., tt1234567)",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "tt1234567",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_mtcm_release_date",
+                "label": "Release Date",
+                "name": "mtcm_release_date",
+                "type": "date_picker",
+                "instructions": "Official release date of the movie",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "33",
+                    "class": "",
+                    "id": ""
+                },
+                "display_format": "d/m/Y",
+                "return_format": "Y-m-d",
+                "first_day": 1
+            },
+            {
+                "key": "field_mtcm_runtime",
+                "label": "Runtime (minutes)",
+                "name": "mtcm_runtime",
+                "type": "number",
+                "instructions": "Duration of the movie in minutes",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "33",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "minutes",
+                "min": 1,
+                "max": "",
+                "step": 1
+            },
+            {
+                "key": "field_mtcm_rating",
+                "label": "Rating",
+                "name": "mtcm_rating",
+                "type": "select",
+                "instructions": "MPAA rating or equivalent",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "33",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "G": "G",
+                    "PG": "PG",
+                    "PG-13": "PG-13",
+                    "R": "R",
+                    "NC-17": "NC-17",
+                    "NR": "Not Rated"
+                },
+                "default_value": [],
+                "allow_null": 1,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            {
+                "key": "field_mtcm_director",
+                "label": "Director",
+                "name": "mtcm_director",
+                "type": "text",
+                "instructions": "Main director of the movie",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_mtcm_tagline",
+                "label": "Tagline",
+                "name": "mtcm_tagline",
+                "type": "text",
+                "instructions": "Movie tagline or slogan",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_mtcm_cast",
+                "label": "Main Cast",
+                "name": "mtcm_cast",
+                "type": "textarea",
+                "instructions": "Main cast members, separated by commas",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "Actor 1, Actor 2, Actor 3",
+                "maxlength": "",
+                "rows": 3,
+                "new_lines": ""
+            },
+            {
+                "key": "field_mtcm_budget",
+                "label": "Budget ($)",
+                "name": "mtcm_budget",
+                "type": "number",
+                "instructions": "Production budget in US dollars",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "$",
+                "append": "",
+                "min": 0,
+                "max": "",
+                "step": 1000
+            },
+            {
+                "key": "field_mtcm_revenue",
+                "label": "Box Office ($)",
+                "name": "mtcm_revenue",
+                "type": "number",
+                "instructions": "Total box office revenue in US dollars",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "$",
+                "append": "",
+                "min": 0,
+                "max": "",
+                "step": 1000
+            },
+            {
+                "key": "field_mtcm_country",
+                "label": "Country",
+                "name": "mtcm_country",
+                "type": "text",
+                "instructions": "Country of origin",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_mtcm_language",
+                "label": "Language",
+                "name": "mtcm_language",
+                "type": "text",
+                "instructions": "Original language of the movie",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_mtcm_poster_url",
+                "label": "Poster URL",
+                "name": "mtcm_poster_url",
+                "type": "url",
+                "instructions": "Direct URL to the movie poster image",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "https://"
+            },
+            {
+                "key": "field_mtcm_backdrop_url",
+                "label": "Backdrop URL",
+                "name": "mtcm_backdrop_url",
+                "type": "url",
+                "instructions": "Direct URL to the movie backdrop image",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "https://"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "mtcm_movie"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "Fields for movie details and metadata"
+    },
+    {
+        "key": "group_mtcm_tv_show_fields",
+        "title": "TV Show Details",
+        "fields": [
+            {
+                "key": "field_mtcm_tv_tmdb_id",
+                "label": "TMDB ID",
+                "name": "mtcm_tmdb_id",
+                "type": "number",
+                "instructions": "The Movie Database ID for this TV show",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "min": "",
+                "max": "",
+                "step": ""
+            },
+            {
+                "key": "field_mtcm_tv_imdb_id",
+                "label": "IMDb ID",
+                "name": "mtcm_imdb_id",
+                "type": "text",
+                "instructions": "IMDb identifier (e.g., tt1234567)",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "tt1234567",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_mtcm_first_air_date",
+                "label": "First Air Date",
+                "name": "mtcm_first_air_date",
+                "type": "date_picker",
+                "instructions": "Date when the show first aired",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "display_format": "d/m/Y",
+                "return_format": "Y-m-d",
+                "first_day": 1
+            },
+            {
+                "key": "field_mtcm_last_air_date",
+                "label": "Last Air Date",
+                "name": "mtcm_last_air_date",
+                "type": "date_picker",
+                "instructions": "Date when the show last aired (leave empty if ongoing)",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "display_format": "d/m/Y",
+                "return_format": "Y-m-d",
+                "first_day": 1
+            },
+            {
+                "key": "field_mtcm_creator",
+                "label": "Creator",
+                "name": "mtcm_creator",
+                "type": "text",
+                "instructions": "Creator(s) of the TV show",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_mtcm_network",
+                "label": "Network/Platform",
+                "name": "mtcm_network",
+                "type": "text",
+                "instructions": "TV network or streaming platform",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_mtcm_tv_cast",
+                "label": "Main Cast",
+                "name": "mtcm_cast",
+                "type": "textarea",
+                "instructions": "Main cast members, separated by commas",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "Actor 1, Actor 2, Actor 3",
+                "maxlength": "",
+                "rows": 3,
+                "new_lines": ""
+            },
+            {
+                "key": "field_mtcm_total_seasons",
+                "label": "Total Seasons",
+                "name": "mtcm_total_seasons",
+                "type": "number",
+                "instructions": "Total number of seasons",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "25",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "min": 1,
+                "max": "",
+                "step": 1
+            },
+            {
+                "key": "field_mtcm_total_episodes",
+                "label": "Total Episodes",
+                "name": "mtcm_total_episodes",
+                "type": "number",
+                "instructions": "Total number of episodes across all seasons",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "25",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "min": 1,
+                "max": "",
+                "step": 1
+            },
+            {
+                "key": "field_mtcm_episode_runtime",
+                "label": "Episode Runtime (minutes)",
+                "name": "mtcm_episode_runtime",
+                "type": "number",
+                "instructions": "Average runtime per episode in minutes",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "25",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "min",
+                "min": 1,
+                "max": "",
+                "step": 1
+            },
+            {
+                "key": "field_mtcm_tv_rating",
+                "label": "Rating",
+                "name": "mtcm_rating",
+                "type": "select",
+                "instructions": "TV content rating",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "25",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "TV-Y": "TV-Y",
+                    "TV-Y7": "TV-Y7",
+                    "TV-G": "TV-G",
+                    "TV-PG": "TV-PG",
+                    "TV-14": "TV-14",
+                    "TV-MA": "TV-MA",
+                    "NR": "Not Rated"
+                },
+                "default_value": [],
+                "allow_null": 1,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            {
+                "key": "field_mtcm_status",
+                "label": "Status",
+                "name": "mtcm_status",
+                "type": "select",
+                "instructions": "Current status of the TV show",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "Returning Series": "Returning Series",
+                    "Ended": "Ended",
+                    "Canceled": "Canceled",
+                    "In Production": "In Production",
+                    "Pilot": "Pilot"
+                },
+                "default_value": [],
+                "allow_null": 1,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            {
+                "key": "field_mtcm_tv_country",
+                "label": "Country",
+                "name": "mtcm_country",
+                "type": "text",
+                "instructions": "Country of origin",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_mtcm_tv_language",
+                "label": "Language",
+                "name": "mtcm_language",
+                "type": "text",
+                "instructions": "Original language of the show",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_mtcm_tv_poster_url",
+                "label": "Poster URL",
+                "name": "mtcm_poster_url",
+                "type": "url",
+                "instructions": "Direct URL to the TV show poster image",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "https://"
+            },
+            {
+                "key": "field_mtcm_tv_backdrop_url",
+                "label": "Backdrop URL",
+                "name": "mtcm_backdrop_url",
+                "type": "url",
+                "instructions": "Direct URL to the TV show backdrop image",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "https://"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "mtcm_tv_show"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "Fields for TV show details and metadata"
+    }
+]

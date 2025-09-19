@@ -1,0 +1,373 @@
+/* Movie TV Classic Manager - Frontend Styles */
+
+/* General movie/TV show container */
+.mtcm-movie,
+.mtcm-tv-show {
+    margin: 20px 0;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #e1e4e8;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+/* Full display layout */
+.mtcm-movie-full,
+.mtcm-tv-show-full {
+    max-width: 100%;
+}
+
+.mtcm-movie-header,
+.mtcm-tv-show-header {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.mtcm-movie-poster,
+.mtcm-tv-show-poster {
+    flex-shrink: 0;
+    width: 200px;
+}
+
+.mtcm-poster-image {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.mtcm-movie-info,
+.mtcm-tv-show-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.mtcm-movie-title,
+.mtcm-tv-show-title {
+    margin: 0 0 10px 0;
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.2;
+}
+
+.mtcm-movie-tagline {
+    margin: 0 0 15px 0;
+    font-style: italic;
+    color: #666;
+    font-size: 1.1em;
+}
+
+.mtcm-movie-details,
+.mtcm-tv-show-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.mtcm-detail-item {
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.mtcm-detail-item:last-child {
+    border-bottom: none;
+}
+
+.mtcm-detail-item strong {
+    color: #333;
+    margin-right: 8px;
+}
+
+.mtcm-rating {
+    background: #007cba;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.mtcm-status {
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.mtcm-status:contains("Returning Series"),
+.mtcm-status:contains("In Production") {
+    background: #28a745;
+    color: white;
+}
+
+.mtcm-status:contains("Ended"),
+.mtcm-status:contains("Canceled") {
+    background: #dc3545;
+    color: white;
+}
+
+/* Description section */
+.mtcm-movie-description,
+.mtcm-tv-show-description {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e1e4e8;
+}
+
+.mtcm-movie-description h4,
+.mtcm-tv-show-description h4 {
+    margin: 0 0 15px 0;
+    font-size: 1.3em;
+    color: #333;
+}
+
+.mtcm-description-content {
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Compact display */
+.mtcm-movie-compact,
+.mtcm-tv-show-compact {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.mtcm-movie-poster-small,
+.mtcm-tv-show-poster-small {
+    flex-shrink: 0;
+    width: 80px;
+}
+
+.mtcm-poster-image-small {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+.mtcm-movie-info-compact,
+.mtcm-tv-show-info-compact {
+    flex: 1;
+    min-width: 0;
+}
+
+.mtcm-movie-info-compact .mtcm-movie-title,
+.mtcm-tv-show-info-compact .mtcm-tv-show-title {
+    margin: 0 0 8px 0;
+    font-size: 1.3em;
+}
+
+.mtcm-movie-meta,
+.mtcm-tv-show-meta {
+    margin: 5px 0;
+    color: #666;
+    font-size: 0.9em;
+}
+
+.mtcm-movie-excerpt,
+.mtcm-tv-show-excerpt {
+    margin: 10px 0 0 0;
+    line-height: 1.4;
+    color: #555;
+}
+
+/* Poster-only display */
+.mtcm-movie-poster-only,
+.mtcm-tv-show-poster-only {
+    position: relative;
+    width: 200px;
+    margin: 10px;
+    display: inline-block;
+    vertical-align: top;
+    border: none;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.mtcm-poster-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: white;
+    padding: 20px 10px 10px;
+    border-radius: 0 0 6px 6px;
+}
+
+.mtcm-poster-overlay .mtcm-movie-title,
+.mtcm-poster-overlay .mtcm-tv-show-title {
+    margin: 0 0 5px 0;
+    font-size: 1.1em;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+
+.mtcm-movie-year,
+.mtcm-tv-show-year {
+    margin: 0;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+.mtcm-no-poster {
+    width: 200px;
+    height: 300px;
+    background: #f8f9fa;
+    border: 2px dashed #dee2e6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.mtcm-no-poster .mtcm-movie-title,
+.mtcm-no-poster .mtcm-tv-show-title {
+    margin: 0 0 10px 0;
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* Lists */
+.mtcm-movie-list,
+.mtcm-tv-show-list {
+    margin: 20px 0;
+}
+
+.mtcm-columns-1 {
+    display: block;
+}
+
+.mtcm-columns-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.mtcm-columns-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.mtcm-columns-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* Error and no results messages */
+.mtcm-error {
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+    padding: 15px;
+    border-radius: 6px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.mtcm-no-results {
+    background: #d1ecf1;
+    border: 1px solid #bee5eb;
+    color: #0c5460;
+    padding: 15px;
+    border-radius: 6px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .mtcm-movie-header,
+    .mtcm-tv-show-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .mtcm-movie-poster,
+    .mtcm-tv-show-poster {
+        width: 150px;
+        margin-bottom: 15px;
+    }
+    
+    .mtcm-movie-details,
+    .mtcm-tv-show-details {
+        grid-template-columns: 1fr;
+    }
+    
+    .mtcm-movie-compact,
+    .mtcm-tv-show-compact {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .mtcm-movie-poster-small,
+    .mtcm-tv-show-poster-small {
+        width: 120px;
+        align-self: center;
+    }
+    
+    .mtcm-columns-2,
+    .mtcm-columns-3,
+    .mtcm-columns-4 {
+        grid-template-columns: 1fr;
+    }
+    
+    .mtcm-movie-poster-only,
+    .mtcm-tv-show-poster-only {
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .mtcm-movie,
+    .mtcm-tv-show {
+        padding: 15px;
+        margin: 15px 0;
+    }
+    
+    .mtcm-movie-title,
+    .mtcm-tv-show-title {
+        font-size: 1.5em;
+    }
+    
+    .mtcm-movie-poster,
+    .mtcm-tv-show-poster {
+        width: 120px;
+    }
+    
+    .mtcm-movie-poster-only,
+    .mtcm-tv-show-poster-only {
+        width: 120px;
+        margin: 5px;
+    }
+}
+
+/* Print styles */
+@media print {
+    .mtcm-movie,
+    .mtcm-tv-show {
+        border: 1px solid #000;
+        box-shadow: none;
+        page-break-inside: avoid;
+    }
+    
+    .mtcm-poster-overlay {
+        background: rgba(0,0,0,0.1);
+        color: #000;
+    }
+}
